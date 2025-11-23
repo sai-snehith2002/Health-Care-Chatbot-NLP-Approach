@@ -45,10 +45,31 @@ Below is the visual workflow used in the project:
 <img src="/mnt/data/eeb44942-9229-4509-b166-a02fbdcc23c2.png" width="450"/>
 
 ---
+## 🗂 Dataset Format (Training Data)
+Each disease samples:
 
+- Name
+- Description
+- Symptoms
+- Treatments
+- Responses used by chatbot
+
+Purpose of This Project
+- Build a medical symptom-based prediction chatbot
+- Compare modern NLP approaches with classical ML techniques
+- Understand how different text-processing models behave on the same dataset
+- Provide a clean modular implementation for research or educational use
+
+Technologies Used
+- Python
+- TensorFlow / Keras
+- NLTK (Tokenization, Lemmatization, WordNet)
+- Scikit-learn
+- BERT (Transformers)
+- NumPy, Pandas
 ---
 
-## 🗂 Dataset Format (Training Data)
+## 🗂 Dataset Sample
 
 All models were trained using the same dataset structure.  
 Below is the simplified pattern used in `intents.json`:
@@ -67,31 +88,31 @@ Below is the simplified pattern used in `intents.json`:
 }
 
 ---
-Each disease includes:
+## Chatbot Methodology (How It Works)
 
-Name
+### 1. Tokenization & Preprocessing
+- The user input text is split into individual tokens.
+- Words are normalized, cleaned, and lemmatized using NLTK.
 
-Description
+### 2. Symptom Extraction
+- The processed tokens are compared against the known symptoms list.
+- Only meaningful medical terms are extracted.
 
-Symptoms
+### 3. Synonym Matching (*WordNet + Synset*)
+- Even if a user enters alternate wording (example: "pimple" → acne symptom),
+  WordNet Synsets help map the term to the correct medical symptom.
+- This improves flexibility and interpretation accuracy.
 
-Treatments
+### 4. Validation Layer
+- **Valid symptoms** → forwarded to the disease classifier model.
+- **Invalid symptoms** → chatbot responds with an “invalid symptom” message.
 
-Responses used by chatbot
+### 5. Disease Prediction & Response
+- The trained NLP model predicts the most probable disease.
+- A friendly, human-like response is generated for the user.
 
-Purpose of This Project
-- Build a medical symptom-based prediction chatbot
-- Compare modern NLP approaches with classical ML techniques
-- Understand how different text-processing models behave on the same dataset
-- Provide a clean modular implementation for research or educational use
+---
 
-Technologies Used
-- Python
-- TensorFlow / Keras
-- NLTK (Tokenization, Lemmatization, WordNet)
-- Scikit-learn
-- BERT (Transformers)
-- NumPy, Pandas
 
-## 📂 Project Structure
+
 
