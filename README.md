@@ -42,7 +42,8 @@ The chatbot pipeline works through four main stages:
 
 Below is the visual workflow used in the project:
 
-<img src="/mnt/data/eeb44942-9229-4509-b166-a02fbdcc23c2.png" width="450"/>
+<img width="374" height="433" alt="image" src="https://github.com/user-attachments/assets/4590bf89-8987-4526-950c-03d483277896" />
+
 
 ---
 ## 🗂 Dataset Format (Training Data)
