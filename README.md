@@ -68,26 +68,6 @@ Technologies Used
 - BERT (Transformers)
 - NumPy, Pandas
 ---
-
-## 🗂 Dataset Sample
-
-All models were trained using the same dataset structure.  
-Below is the simplified pattern used in `intents.json`:
-
-```json
-{
-  "intents": [
-    {
-      "name": "Acne",
-      "description": "Acne is a common skin condition...",
-      "symptoms": ["Blackheads", "Whiteheads", "Pimples"],
-      "treatments": ["Topical creams", "Oral medication"],
-      "response": ["You may have Acne"]
-    }
-  ]
-}
-
----
 ## Chatbot Methodology (How It Works)
 
 ### 1. Tokenization & Preprocessing
@@ -110,6 +90,26 @@ Below is the simplified pattern used in `intents.json`:
 ### 5. Disease Prediction & Response
 - The trained NLP model predicts the most probable disease.
 - A friendly, human-like response is generated for the user.
+
+## 🗂 Dataset Sample
+
+All models were trained using the same dataset structure.  
+Below is the simplified pattern used in `intents.json`:
+
+```json
+{
+  "intents": [
+    {
+      "name": "Acne",
+      "description": "Acne is a common skin condition...",
+      "symptoms": ["Blackheads", "Whiteheads", "Pimples"],
+      "treatments": ["Topical creams", "Oral medication"],
+      "response": ["You may have Acne"]
+    }
+  ]
+}
+
+---
 
 ---
 
